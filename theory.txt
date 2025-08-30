@@ -1,0 +1,34 @@
+
+struct :
+	infile --> cmdd1 --> PIPE -->cmd2 --> outfile
+
+new var:
+	pid_t
+
+ext functions
+
+- PIPE
+	one way data flow, one end is input, other end output.
+	first command writes to pipe, second command reads from pipe
+- execve
+	Done inside child proccess and converts that child process 
+	into the execution of a command eg ls
+- fork
+	called for each time creates a child (for the church). If output of fork == 0, 
+	success! 
+- waitpid
+	(last thing called in pipex), will wait for the process which it was given to finish(squirt?)
+	if parent process finished before child process == zombie child == leak. 
+- dup2
+	takes new fd and an old fd, closes old fd, copy new fd to old fd.
+	ex.
+		stdinput --> infile/pipe
+		stdoutput --> pipe/outfile
+- access
+	checks perm, for file. X_OK (ex perms)
+
+
+
+infile , first command, second command, outfile.
+create infile, create outfile
+execve - absolute path of command, split of command, wc -l.
