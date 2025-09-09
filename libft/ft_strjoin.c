@@ -36,6 +36,18 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	f[c1 + c2] = '\0';
 	return (f);
 }
+
+char	*ft_strjoinx2(const char *s1, const char *s2, const char *s3)
+{
+	char	*st;
+	char	*final_str;
+
+	st = ft_strjoin(s1, s2);
+	final_str = ft_strjoin(st, s3);
+	free(st);
+	return(final_str);
+}
+
 /* 
 int	main(void)
 {

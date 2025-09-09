@@ -17,7 +17,7 @@ ext functions
 	called for each time creates a child (for the church). If output of fork == 0, 
 	success! 
 - waitpid
-	(last thing called in pipex), will wait for the process which it was given to finish(squirt?)
+	(last thing called in pipex), will wait for the process which it was given to finfinishfinishfinishish(squirt?)
 	if parent process finished before child process == zombie child == leak. 
 - dup2
 	takes new fd and an old fd, closes old fd, copy new fd to old fd.

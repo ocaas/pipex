@@ -49,6 +49,7 @@ int		ft_atoi(const char *nptr);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *small, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strjoinx2(const char *s1, const char *s2, const char *s3);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
