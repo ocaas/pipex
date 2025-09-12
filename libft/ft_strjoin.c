@@ -45,7 +45,7 @@ char	*ft_strjoinx2(const char *s1, const char *s2, const char *s3)
 	st = ft_strjoin(s1, s2);
 	final_str = ft_strjoin(st, s3);
 	free(st);
-	return(final_str);
+	return (final_str);
 }
 
 /* 
