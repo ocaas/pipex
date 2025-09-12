@@ -6,7 +6,7 @@
 /*   By: olopez-s <olopez-s@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 04:50:17 by olopez-s          #+#    #+#             */
-/*   Updated: 2025/09/12 19:55:53 by olopez-s         ###   ########.fr       */
+/*   Updated: 2025/09/12 23:18:05 by olopez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*find_path(const char *cmd, char **envp)
 	i = 0;
 	if (access(cmd, X_OK) == 0)
 		return (ft_strdup(cmd));
+	if (ft_strncmp(cmd, "./", 2) == 0)
+		return (NULL); 
 	while (envp[i] && ft_strncmp(envp[i], "PATH", 4) != 0)
 		i++;
 	if (!envp[i])
