@@ -9,7 +9,7 @@ CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
 
 SRC		= pipex.c \
-		utils \
+		utils.c \
 		libft/ft_putstr_fd.c libft/ft_split.c libft/ft_strdup.c \
 		libft/ft_strjoin.c libft/ft_strlen.c libft/ft_strncmp.c \
 		libft/ft_substr.c
